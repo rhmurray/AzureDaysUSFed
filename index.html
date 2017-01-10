@@ -44,21 +44,6 @@ automatically in just a few seconds.
        
     window.appInsights=appInsights;
     appInsights.trackPageView();
-	
-   var myOptions = {
-	"nativeControlsForTouch": false,
-	controls: true,
-	autoplay: true,
-	width: "640",
-	height: "400",
-}
-myPlayer = amp("azuremediaplayer", myOptions);
-myPlayer.src([
-        {
-                "src": "http://dyumedia.streaming.mediaservices.windows.net/15f6c2d4-056c-4f5a-8f4c-07c6de517b17/08c2a5de-53ca-47cd-8ac6-f06774903ebd.ism/manifest(format=mpd-time-csf)",
-                "type": "application/vnd.ms-sstr+xml"
-        }
-]);
 </script>
 
    
@@ -75,7 +60,23 @@ myPlayer.src([
                 <p>Welcome to USPS Federal Azure Days! On the day of the event, it will be live broadcast to this page courtesy of Azure Media Services and NewTek!</p>
 					<div align="center">
 					<video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video>
-					</div>
+			<script>
+				   var myOptions = {
+	"nativeControlsForTouch": false,
+	controls: true,
+	autoplay: true,
+	width: "640",
+	height: "400",
+}
+myPlayer = amp("azuremediaplayer", myOptions);
+myPlayer.src([
+        {
+                "src": "http://dyumedia.streaming.mediaservices.windows.net/15f6c2d4-056c-4f5a-8f4c-07c6de517b17/08c2a5de-53ca-47cd-8ac6-f06774903ebd.ism/manifest(format=mpd-time-csf)",
+                "type": "application/vnd.ms-sstr+xml"
+        }
+]);
+						</script>
+		    </div>
             </div>
         </div>
     </header>
